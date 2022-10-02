@@ -6,9 +6,11 @@
                     <div class="card-header">Timeline</div>
 
                     <div class="card-body" >
-                        <div class="media" v-for="tweet in tweets">
+                        <div class="d-flex p-2" v-for="tweet in tweets">
+                        <div class="flex-shrink-0">
                             <img src="https://eu.ui-avatars.com/api/?size=64" class="img-responsive" alt="avatar">
-                            <div class="media-body">
+                        </div>
+                            <div class="flex-grow-1 ms-3">
                                     {{tweet.user.name}}
                                 <p>
                                     {{tweet.body}}
