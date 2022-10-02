@@ -16,7 +16,9 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import ExampleComponent from './components/Timeline.vue';
+import PostTweetComponent from './components/PostTweet.vue';
 app.component('Timeline', ExampleComponent);
+app.component('post-tweet', PostTweetComponent);
 
 /**
  * The following block of code may be used to automatically register your

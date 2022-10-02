@@ -23,4 +23,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware'=> 'auth'], function(){
     Route::get('/tweets', [App\Http\Controllers\TweetController::class, 'index']);
+    Route::post('/tweets', [App\Http\Controllers\TweetController::class, 'store']);
 });
