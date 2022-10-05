@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\TweetRequest;
 
 class TweetController extends Controller
 {
@@ -12,9 +12,8 @@ class TweetController extends Controller
         return response()->json($tweets);
     }
 
-    public function store(Request $request){
-        $this->validate($request, ['body' => 'required']);
-
+    public function store(TweetRequest $request){
+        
         $tweet = $request->user()->tweets()->create([
             'body' => $request->body,
         ])->load('user');

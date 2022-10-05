@@ -7,6 +7,7 @@
 
                     <div class="card-body" >
                         <post-tweet :tweets="tweets"></post-tweet>
+                        <hr>
                         <div class="d-flex p-2" v-for="tweet in tweets">
                         <div class="flex-shrink-0">
                             <img src="https://eu.ui-avatars.com/api/?size=64" class="img-responsive" alt="avatar">
