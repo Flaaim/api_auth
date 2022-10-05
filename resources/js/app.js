@@ -17,8 +17,15 @@ const app = createApp({});
 
 import ExampleComponent from './components/Timeline.vue';
 import PostTweetComponent from './components/PostTweet.vue';
+import AuthorizedClients from './components/passport/AuthorizedClients.vue';
+import Clients from './components/passport/Clients.vue';
+import PersonalAccessTokens from './components/passport/PersonalAccessTokens.vue';
+
 app.component('Timeline', ExampleComponent);
 app.component('post-tweet', PostTweetComponent);
+app.component('passport-authorized-clients', AuthorizedClients);
+app.component('passport-clients', Clients);
+app.component('passport-personal-access-tokens', PersonalAccessTokens);
 
 /**
  * The following block of code may be used to automatically register your
