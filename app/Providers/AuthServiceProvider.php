@@ -29,6 +29,8 @@ class AuthServiceProvider extends ServiceProvider
             'view-tweets' => 'View Tweets',
             'post-tweets' => 'Post Tweets',
         ]);
+
+        Passport::tokensExpireIn(now()->addDays(20));
         
     }
 }
