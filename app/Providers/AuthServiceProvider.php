@@ -25,7 +25,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
+        Passport::tokensCan([
+            'view-tweets' => 'View Tweets',
+            'post-tweets' => 'Post Tweets',
+        ]);
         
     }
 }

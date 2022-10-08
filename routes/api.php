@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::get('/user', function (Request $request) {
     return $request->user();
-});
+})->middleware('auth:api');
+
+Route::get('/tweets', [App\Http\Controllers\TweetController::class, 'index'])->middleware('auth:api');
+Route::post('/tweets', [App\Http\Controllers\TweetController::class, 'store'])->middleware(['auth:api', 'scope:post-tweets']);
+
