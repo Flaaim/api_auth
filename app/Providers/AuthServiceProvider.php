@@ -30,7 +30,7 @@ class AuthServiceProvider extends ServiceProvider
             'post-tweets' => 'Post Tweets',
         ]);
 
-        Passport::tokensExpireIn(now()->addDays(20));
+        Passport::tokensExpireIn(now()->addSeconds(20));
         
     }
 }
